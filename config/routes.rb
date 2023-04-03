@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   
   get("/", {:controller => "application", :action => "homepage"})
 
+  get("/text", {:controller => "qr_codes", :action => "process_text"})
+
+  get("/wifi", {:controller => "qr_codes", :action => "process_wifi"})
+
   # Solutions below.
 
   get("/solutions/text", {:controller => "solutions", :action => "text_qr"})
